@@ -1,4 +1,4 @@
-FROM centos:7.6.1810
+FROM centos:7
 
 RUN yum -y install  epel-release \
     && yum -y makecache \
