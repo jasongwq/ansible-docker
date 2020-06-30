@@ -8,7 +8,16 @@ services:
   ansible:
     image: 'jasongwq/ansible'
     container_name: ansible
+    working_dir: /root/
     volumes:
       - '/home/docker_data/ansible/root/:/root/'
+      - '/home/docker_data/ansible/etc/:/etc/ansible/'
       - '/etc/localtime:/etc/localtime'
 ```
+进入docker中
+docker exec -it ansible bash
+使用ssh-keygen生成密钥
+对私有设置密码
+
+后续通过以下买了进入docker中，每次进入前需要输出之前设置的密码
+docker exec -it ansible ssh-agent bash
