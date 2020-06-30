@@ -14,10 +14,17 @@ services:
       - '/home/docker_data/ansible/etc/:/etc/ansible/'
       - '/etc/localtime:/etc/localtime'
 ```
-进入docker中
-docker exec -it ansible bash
-使用ssh-keygen生成密钥
-对私有设置密码
 
-后续通过以下买了进入docker中，每次进入前需要输出之前设置的密码
+首次使用:
+
+进入docker中
+
+docker exec -it ansible bash
+
+使用ssh-keygen生成密钥,对私钥设置密码
+
+后续:
+
+通过以下命令进入docker中，每次进入前需要输入之前设置的密码
+
 docker exec -it ansible ssh-agent bash
