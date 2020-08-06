@@ -1,0 +1,10 @@
+version: '2'
+services:
+  ansible:
+    image: 'jasongwq/ansible'
+    container_name: ansible
+    working_dir: /root/
+    restart: always
+    volumes:
+      - '/home/docker_data/ansible/root/:/root/'
+      - '/etc/localtime:/etc/localtime'
